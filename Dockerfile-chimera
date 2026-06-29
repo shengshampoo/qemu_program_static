@@ -32,7 +32,8 @@ RUN apk add --no-cache \
  git meson ninja gettext-devel-static \
  liburing-devel-static liburing-devel libaio-devel-static libaio-devel \
  openssl3-devel-static openssl3-devel libxext-devel-static libxext-devel \
- lz4-devel-static lz4-devel pixman-devel-static pixman-devel udev-devel-static udev-devel libcap-devel-static libcap-ng-devel-static libcap-ng-devel
+ lz4-devel-static lz4-devel pixman-devel-static pixman-devel udev-devel-static udev-devel libcap-devel-static libcap-ng-devel-static libcap-ng-devel \
+ libxext-devel-static libxext-devel
  
 COPY build-static-lib-chimera.sh build-static-lib.sh
 RUN chmod +x ./build-static-lib.sh
