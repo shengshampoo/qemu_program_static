@@ -38,9 +38,9 @@ ninja install
 
 #glib
 cd $WORKSPACE
-aria2c -x2 -R https://download.gnome.org/sources/glib/2.88/glib-2.88.0.tar.xz
-tar -vxf glib-2.88.0.tar.xz
-cd glib-2.88.0
+aria2c -x2 -R https://download.gnome.org/sources/glib/2.88/glib-2.88.2.tar.xz
+tar -vxf glib-2.88.2.tar.xz
+cd glib-2.88.2
 mkdir build
 cd build
 #LDFLAGS='-lblkid -lmount -luuid -leconf' meson setup --buildtype=release -Ddefault_library=static -Dtests=false ..
