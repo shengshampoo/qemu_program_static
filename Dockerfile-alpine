@@ -35,7 +35,8 @@ RUN apk add --no-cache \
  git meson ninja-build gettext-static cyrus-sasl-static \
  build-base liburing-dev libaio-dev alpine-sdk \
  libsndfile-static libsndfile-dev openssl-libs-static \
- lz4-static lz4-dev pixman-static pixman-dev libudev-zero-dev libcap-static libcap-ng-static libcap-ng-dev
+ lz4-static lz4-dev pixman-static pixman-dev libudev-zero-dev libcap-static libcap-ng-static libcap-ng-dev \
+ libxext-static libxext-dev
  
 COPY build-static-lib-alpine.sh build-static-lib.sh
 RUN chmod +x ./build-static-lib.sh
