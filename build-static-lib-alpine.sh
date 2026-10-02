@@ -38,9 +38,9 @@ ninja install
 
 #glib
 cd $WORKSPACE
-aria2c -x2 -R https://download.gnome.org/sources/glib/2.88/glib-2.88.2.tar.xz
-tar -vxf glib-2.88.2.tar.xz
-cd glib-2.88.2
+aria2c -x2 -R https://download.gnome.org/sources/glib/2.90/glib-2.90.0.tar.xz
+tar -vxf glib-2.90.0.tar.xz
+cd glib-2.90.0
 mkdir build
 cd build
 #LDFLAGS='-lblkid -lmount -luuid -leconf' meson setup --buildtype=release -Ddefault_library=static -Dtests=false ..
@@ -157,7 +157,7 @@ ninja && DESTDIR=/ ninja install
 cd $WORKSPACE
 curl -sL https://www.x.org/archive/individual/lib/libXau-1.0.12.tar.xz | tar xv --xz
 cd libXau-1.0.12
-../configure --enable-static --disable-shared --prefix=/usr
+./configure --enable-static --disable-shared --prefix=/usr
 make -j8 && make install
 
 #clean
