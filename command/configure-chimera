@@ -17,7 +17,7 @@ RUN "/work/src/${QEMU_SRC_BASENAME}/configure" \
     --enable-qcow1 \
     --enable-vmdk \
     --enable-fuse \
-    --extra-ldflags='-lgio-2.0 -leconf' \
+    --extra-ldflags='-lgio-2.0 -leconf -lgdbm' \
     --enable-cap-ng \
     --enable-slirp --enable-gio --enable-passt --enable-nettle \
     --enable-rust --cc=clang --rust-target-triple=${HOST_ARCH}-chimera-linux-musl \
