@@ -153,6 +153,12 @@ meson setup builddir -Dprefix=/usr --strip
 cd builddir 
 ninja && DESTDIR=/ ninja install
 
+# libxau
+cd $WORKSPACE
+curl -sL https://www.x.org/archive/individual/lib/libXau-1.0.12.tar.xz | tar xv --xz
+cd libXau-1.0.12
+../configure --enable-static --disable-shared --prefix=/usr
+make -j8 && make install
 
 #clean
 rm -rf $WORKSPACE
