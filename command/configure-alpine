@@ -17,7 +17,7 @@ RUN "/work/src/${QEMU_SRC_BASENAME}/configure" \
     --enable-qcow1 \
     --enable-vmdk \
     --enable-fuse \
-    --extra-ldflags='-lgio-2.0 -leconf -lgdbm' \
+    --extra-ldflags='-lgio-2.0 -leconf -lgdbm -lcrypto' \
     --enable-cap-ng \
     --enable-slirp --enable-gio --enable-passt --enable-nettle \
     --enable-libusb --enable-usb-redir --enable-vnc --enable-sdl --enable-sdl-image --enable-fdt --enable-linux-aio --enable-linux-io-uring --enable-pixman --enable-vvfat --enable-zstd --enable-bzip2 --enable-png --enable-vnc-jpeg -enable-slirp=system --enable-lto --static
