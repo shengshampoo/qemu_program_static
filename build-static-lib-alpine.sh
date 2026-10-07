@@ -113,6 +113,12 @@ LDFLAGS='-leconf' meson setup --buildtype=release -Ddefault_library=static -Dpre
 ninja
 ninja install
 
+# MIT Kerberos V5
+cd $WORKSPACE
+curl -sL https://kerberos.org/dist/krb5/1.22/krb5-1.22.2.tar.gz | tar xv --gzip
+cd krb5-1.22.2/src
+LDFLAGS="-static --static -no-pie -s -lintl" ./configure --enable-static --disable-shared --prefix=/usr
+make -j8 && make install
 
 #SDL2
 cd $WORKSPACE
@@ -157,13 +163,6 @@ ninja && DESTDIR=/ ninja install
 cd $WORKSPACE
 curl -sL https://www.x.org/archive/individual/lib/libXau-1.0.12.tar.xz | tar xv --xz
 cd libXau-1.0.12
-./configure --enable-static --disable-shared --prefix=/usr
-make -j8 && make install
-
-# MIT Kerberos V5
-cd $WORKSPACE
-curl -sL https://kerberos.org/dist/krb5/1.22/krb5-1.22.2.tar.gz | tar xv --gzip
-cd krb5-1.22.2/src
 ./configure --enable-static --disable-shared --prefix=/usr
 make -j8 && make install
 
