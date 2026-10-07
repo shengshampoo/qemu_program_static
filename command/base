@@ -7,7 +7,7 @@ HOST_OS=${HOST_OS_RAW,,}
 HOST_ARCH=${HOST_ARCH_RAW,,}
 
 QEMU_NAME="qemu"
-QEMU_REV=$(curl -s "https://gitlab.com/api/v4/projects/11167699/repository/tags?order_by=updated&search=11.0" | jq -r '.[0].name' | tr -d 'v')
+QEMU_REV=$(curl -s "https://gitlab.com/api/v4/projects/11167699/repository/tags?order_by=updated&search=11.1" | jq -r '.[0].name' | tr -d 'v')
 
 # when not empty use `git clone` instead of downloading source tarball
 QEMU_GIT_COMMIT=""
