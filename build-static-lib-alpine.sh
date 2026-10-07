@@ -163,7 +163,7 @@ make -j8 && make install
 # MIT Kerberos V5
 cd $WORKSPACE
 curl -sL https://kerberos.org/dist/krb5/1.22/krb5-1.22.2.tar.gz | tar xv --gzip
-cd krb5-1.22.2
+cd krb5-1.22.2/src
 ./configure --enable-static --disable-shared --prefix=/usr
 make -j8 && make install
 
